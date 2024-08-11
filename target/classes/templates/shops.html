@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shops</title>
+</head>
+<body>
+<form th:action="@{/shops/all}" method="get">
+    <label>Search:
+        <input type="text" name="search">
+    </label>
+    <input type="submit">
+</form>
+<div th:each="shop : ${shop_list}">
+    <a th:text="${shop}" th:href="@{/shops/details(id=${shop.id})}"></a>
+</div>
+</body>
+</html>

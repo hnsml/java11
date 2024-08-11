@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h1 th:text="${shop.get().name}"></h1>
+        <h2 th:text="${shop.get().address}"></h2>
+        <h2 th:text="${shop.get().number}"></h2>
+        <h2 th:text="${shop.get().email}"></h2>
+        <h2 th:text="${shop.get().url}"></h2>
+        <h2 th:text="${shop.get().description}"></h2>
+        <h2 th:text="${shop.get().category}"></h2>
+        <button th:onclick="|window.location.href='/shops/edit?id=${shop.get().id}'|">Edit</button>
+        <button th:onclick="|window.location.href='/shops/delete?id=${shop.get().id}'|">Delete</button>
+    </div>
+</body>
+</html>

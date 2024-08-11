@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add</title>
+</head>
+<body>
+    <form th:action="@{/shops/shop}" th:object="${shop}" method="post">
+        <div>
+            <label>Name:
+                <input type="text" id="name" th:field="*{name}">
+            </label>
+        </div>
+        <div>
+            <label>Address:
+                <input type="text" id="address" th:field="*{address}">
+            </label>
+        </div>
+        <div>
+            <label>Number:
+                <input type="text" id="number" th:field="*{number}">
+            </label>
+        </div>
+        <div>
+            <label>Email:
+                <input type="text" id="email" th:field="*{email}">
+            </label>
+        </div>
+        <div>
+            <label>Url:
+                <input type="text" id="url" th:field="*{url}">
+            </label>
+        </div>
+        <div>
+            <label>Description:
+                <input type="text" id="description" th:field="*{description}">
+            </label>
+        </div>
+        <div>
+            <label>Category:
+                <input type="text" id="category" th:field="*{category}">
+            </label>
+        </div>
+        <div>
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+</body>
+</html>
